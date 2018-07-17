@@ -19,12 +19,12 @@ node.jsで動作し、nem-libraryを使用しています。
 # 環境構築
 ## Slack側の設定
 ### Slash Commands
-    - command
-        - /tipslack
-    - URL
-        - http://ipaddress:1337/tipslack
-    - トークン
-        - この部分に表示された文字列をプログラム上のSLACK_TOKENに記入	
+  - command
+    - /tipslack
+  - URL
+    - http://ipaddress:1337/tipslack
+  - トークン
+    - この部分に表示された文字列をプログラム上のSLACK_TOKENに記入	
 
 ### 着信 Web フック
   - Webhook URL
