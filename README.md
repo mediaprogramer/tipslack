@@ -25,6 +25,7 @@ node.jsで動作し、nem-libraryを使用しています。
         - http://ipaddress:1337/tipslack
     - トークン
         - この部分に表示された文字列をプログラム上のSLACK_TOKENに記入	
+
 ### 着信 Web フック
   - Webhook URL
         - この部分に表示された文字列をSLACK_HOOK_URLに記入
