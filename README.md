@@ -33,9 +33,9 @@ node.jsで動作し、nem-libraryを使用しています。
 ## Node.js設定
 ### Node.jsインストール
 ### ライブラリ
-* log4js (=> 2.8.0)
-* nem-library (=> 1.0.7)
-* express (=> 4.16.3)
+* log4js (2.8.0)
+* nem-library (1.0.7)
+* express (4.16.3)
 * request
 
 
