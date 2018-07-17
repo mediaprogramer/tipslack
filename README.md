@@ -1,0 +1,2 @@
+# tipslack
+tipbot for  slack
