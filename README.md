@@ -12,7 +12,7 @@ node.jsで動作し、nem-libraryを使用しています。
 システム秘密鍵を用意し、各アカウントのuser_nameと組み合わせてブレインウォレットを生成します。ユーザが自分の秘密鍵を知ることは出来ません。
 ## コマンド
 * deposit
-* withdrow
+* withdraw
 * tip
 
 
