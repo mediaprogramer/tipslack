@@ -89,7 +89,7 @@ app.post('/tipslack', (req, res) => {
 			"TipSLACKの使い方\n"
 			+ "/tipslack deposit \n"
 			+ "    TipSLACKアドレス確認\n"
-			+ "/tipslack withdrow [アドレス] [出金額] [モザイク名] \n"
+			+ "/tipslack withdraw [アドレス] [出金額] [モザイク名] \n"
 			+ "    指定アドレスに指定量を出金 \n"
 			+ "/tipslack tip [@相手] [チップ量] [モザイク名] [メッセージ] \n"
 			+ "    @相手にモザイクを指定数量チップする。"
@@ -100,7 +100,7 @@ app.post('/tipslack', (req, res) => {
 	if (command[1] == "deposit"){
 		deposit(res,req.body.user_name);
 
-	}else if(command[1] == "withdrow"){
+	}else if(command[1] == "withdraw"){
 		let option = command[2].match(/\s+(\S*)\s+(\S*)\s+(\S*)(\s*)(.*)?/);
 		let address = option[1];
 		let amount = option[2];
@@ -110,7 +110,7 @@ app.post('/tipslack', (req, res) => {
 		}else{
 			message = "";
 		}
-		withdrow(res,req.body.user_name,address,amount,mosaic,message);
+		withdraw(res,req.body.user_name,address,amount,mosaic,message);
 
 	}else if(command[1] == "tip"){
 		let option = command[2].match(/\s+@(\S*)\s+(\S*)\s+(\S*)(\s*)(.*)?/);
@@ -166,7 +166,7 @@ function deposit(res,user_name){
 }
 
 //出金
-function withdrow(res,user_name,address,amount,mosaic,message){
+function withdraw(res,user_name,address,amount,mosaic,message){
 
 	reply(res, "<@" +user_name + "> さんの送金リクエストを受付けました。");
 	transferTipTransaction(user_name,address,amount,mosaic,message,"成功時メッセージ");
